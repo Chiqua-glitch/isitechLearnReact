@@ -1,0 +1,33 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem 5rem;
+}
+
+header > div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+header > div input[type="text"] {
+  border: var(--border);
+  padding: 10px;
+}
+
+header > div :where(.sign-up, .sign-in) {
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  padding: 12px;
+}
+
+header > div .sign-up {
+  background-color: var(--color-black);
+  color: white;
+}
+header > div .sign-in {
+    background-color: var(--color-white);
+    color: var(--btn-muted);
+    border: var(--border);
+}

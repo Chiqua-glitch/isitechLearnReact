@@ -1,0 +1,38 @@
+form {
+  border: 1px solid grey;
+  border-radius: 15px;
+  width: 30%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  padding: 2rem;
+}
+
+form div {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+form div + div {
+    margin-top: 2rem;
+}
+
+
+form label {
+    text-align: left;
+}
+
+input[type=submit] {
+    display: block;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+input:not(input[type=submit]) {
+    outline: none;
+}

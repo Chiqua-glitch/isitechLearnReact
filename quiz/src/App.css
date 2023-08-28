@@ -1,0 +1,31 @@
+.card form input[type=submit], input[type=text] {
+  margin: 0 auto;
+}
+
+.card > p {
+  text-align: center;
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid grey;
+  border-radius: 15px;
+  padding: 1rem;
+}
+
+form {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.true {
+  background-color: green;
+}
+
+.false {
+  background-color: red;
+}

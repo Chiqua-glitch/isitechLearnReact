@@ -1,0 +1,162 @@
+div.calc {
+  display: grid;
+  grid-template-areas:
+    "spec calcs"
+    "number calcs";
+  grid-template-columns: 240px 80px;
+}
+
+div.number {
+  display: grid;
+  grid-template-areas:
+    "one two three"
+    "four five six"
+    "seven height nine"
+    "ten ten eleven";
+  grid-area: number;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(4, 80px);
+}
+
+div.number button {
+  background-color: #838081;
+}
+
+div.calcs button,
+div.specCharac button {
+  font-size: 0.9rem;
+}
+
+div.calcs {
+  grid-area: calcs;
+  display: flex;
+  flex-direction: column;
+}
+
+div.calcs button {
+  background-color: orange;
+  width: 80px;
+  height: 80px;
+}
+
+div.specCharac {
+  grid-area: spec;
+  display: flex;
+}
+
+div.specCharac button {
+  background-color: grey;
+  width: 80px;
+  height: 80px;
+}
+
+div button {
+  cursor: pointer;
+  color: white;
+  font-size: 1.5rem;
+}
+
+div :where(.number, .calcs) button  {
+  border: 1px solid #5A5658;
+}
+
+div.specCharac button {
+  border: 1px solid #5A5658;
+  border-top: none;
+}
+
+div button:active {
+  border: 1px solid black;
+}
+
+.calculatrice {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.resultat {
+  background-color: #5A5658;
+  padding: 1rem 10px 1rem 0;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  color: white;
+}
+
+.resultat > span.calc {
+  font-size: 3rem;
+  word-spacing: 5px;
+}
+
+.icon {
+  font-size: 1.2rem;
+}
+
+.history {
+  position: absolute;
+  top: 3rem;
+  border: 1px solid grey;
+  text-align: left;
+  border-radius: 10px;
+  right: -20rem;
+  width: 80%;
+  height: min-content;
+  padding: 1rem;
+  z-index: 1;
+  background-color: white;
+}
+
+.history p {
+  margin: 0;
+  color: black;
+}
+
+.history p + p {
+  margin-top: 10px;
+}
+
+div.number button:first-of-type {
+  grid-area: one;
+}
+div.number button:nth-of-type(2) {
+  grid-area: two;
+}
+div.number button:nth-of-type(3) {
+  grid-area: three;
+}
+div.number button:nth-of-type(4) {
+  grid-area: four;
+}
+div.number button:nth-of-type(5) {
+  grid-area: five;
+}
+div.number button:nth-of-type(6) {
+  grid-area: six;
+}
+div.number button:nth-of-type(7) {
+  grid-area: seven;
+}
+div.number button:nth-of-type(8) {
+  grid-area: height;
+}
+div.number button:nth-of-type(9) {
+  grid-area: nine;
+}
+div.number button:nth-of-type(10) {
+  grid-area: ten;
+}
+div.number button:nth-of-type(11) {
+  grid-area: eleven;
+}
+
+.icon {
+  position: absolute;
+  left: 13px;
+  top: 20px;
+  cursor: pointer;
+  color: white;
+}

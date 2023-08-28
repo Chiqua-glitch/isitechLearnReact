@@ -1,0 +1,18 @@
+header nav.nav-fluid ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-fluid a {
+  text-transform: capitalize;
+  color: var(--color-link);
+}
+
+.nav-fluid a.link-active {
+  opacity: 1;
+}
+
+.nav-fluid a:not(:has(img)) {
+  opacity: 0.5;
+}
